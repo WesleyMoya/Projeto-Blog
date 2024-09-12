@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro de Cidade</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos customizados -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif; /* Fonte padrão */
+            background-image: url('images/mapamundi.jpg');
+            background-repeat: no-repeat; /* Não repete a imagem */
+            background-size: cover; /* Cobre toda a área disponível */
+            background-position: center; /* Centraliza a imagem */
+            padding-top: 4rem; /* Espaçamento no topo */
+        }
+        .container {
+            max-width: 500px; /* Largura máxima do formulário */
+            background-color: #fff; /* Fundo branco */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); /* Sombra suave */
+        }
+        h2 {
+            font-size: 2.5rem; /* Tamanho do título */
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333; /* Cor do título */
+        }
+        label {
+            font-weight: bold; /* Negrito nas labels */
+        }
+        .form-control {
+            margin-bottom: 20px; /* Espaçamento entre os campos */
+        }
+        .btn-primary {
+            width: 100%; /* Botão de largura total */
+        }
+        .btn-secondary {
+            width: 100%; /* Botão de largura total */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="mb-4">Formulário de Cadastro de Cidade</h2>
+        <form action="CadastroCidade.php" method="post">
+            <div class="form-group">
+                <label for="nome">Nome da Cidade:</label>
+                <input type="text" class="form-control" name="nome" id="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="estado">Estado:</label>
+                <select class="form-control" name="estado" id="estado" required>
+                    <option value="">Selecione o estado</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Registrar</button>
+                <a href="ListarCidade.php" class="btn btn-secondary">Ver Cidades Registradas</a>
+            </div>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS (opcional, apenas se você precisar de funcionalidades do Bootstrap que usam JavaScript) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+-- Criação do banco de dados
+CREATE DATABASE blogames;
+
+-- Seleção do banco de dados
+USE blogames;
+
+-- Criação da tabela 'cliente'
+CREATE TABLE cliente (
+    id INT AUTO_INCREMENT PRIMARY KEY,  -- Identificador único para cada cliente
+    nome VARCHAR(100) NOT NULL,         -- Nome do cliente
+    senha VARCHAR(255) NOT NULL,        -- Senha do cliente (armazenada como hash)
+    email VARCHAR(100) NOT NULL UNIQUE, -- Email do cliente, deve ser único
+    data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- Data e hora de criação do registro
+    ativo BOOLEAN DEFAULT TRUE           -- Indicador se a conta está ativa
+);
+
+-- Adicionalmente, você pode criar um índice para melhorar a busca por email
+CREATE INDEX idx_email ON cliente (email);
+
+-- Criação da tabela 'cidade'
+CREATE TABLE cidade (
+    id INT AUTO_INCREMENT PRIMARY KEY,    -- Identificador único para cada cidade
+    nome VARCHAR(100) NOT NULL,           -- Nome da cidade
+    estado VARCHAR(2) NOT NULL            -- Estado da cidade (código de 2 letras)
+);
+
+-- Adicionalmente, você pode criar um índice para o campo 'nome' se precisar buscar por cidade com frequência
+CREATE INDEX idx_nome ON cidade (nome);
