@@ -3,7 +3,7 @@
 function conecta() :mysqli
 {
     $servidor = 'localhost';
-    $banco = 'blogw';
+    $banco = 'blogames';
     $port = 3307;
     $usuario = 'root';
     $senha = '';

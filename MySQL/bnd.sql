@@ -1,13 +1,13 @@
-CREATE DATABASE blogw;
-USE blogw;
+create database blogames;
+use blogames;
 
 CREATE TABLE usuario (
     id int NOT NULL AUTO_INCREMENT,
-    nome varchar(50) NOT NULL,
     email varchar(255) NOT NULL,
     senha varchar(60) NOT NULL,
-    data_criacao datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    ativo tinyint NOT NULL DEFAULT '0',
+    nome varchar(50) NOT NULL, 
+    data_criacao datetime NOT NULL DEFAULT CURRENT_TIMESTAMP, 
+    ativo tinyint NOT NULL DEFAULT '0', 
     adm tinyint NOT NULL DEFAULT '0',
     PRIMARY KEY (id)
 );

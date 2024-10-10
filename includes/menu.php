@@ -13,18 +13,14 @@
             <li class="nav-item">
                 <a href="login_formulario.php" class="nav-link">Login</a>
             </li>
-            <?php if (isset($_SESSION['login'])) : ?>
-                <li class="nav-item">
+            <li class="nav-item">
                 <a href="post_formulario.php" class="nav-link">Incluir Post</a>
             </li>
-            <?php endif; ?>
-            <?php if ((isset($_SESSION['login']))
-                && ($_SESSION['login']['usuario']['adm'] === 1)
-            ) : ?>
-
-                <li class="nav-item">
-                    <a href="usuarios.php" class="nav-link">Usuários</a>
-                </li>
+            <?php if((isset($_SESSION['login'])) 
+            && ($_SESSION['login']['usuario']['adm'] === 1)) : ?>
+            <li class="nav-item">
+                <a href="usuarios.php" class="nav-link">Usuários</a>
+            </li>
             <?php endif; ?>
         </ul>
     </div>
